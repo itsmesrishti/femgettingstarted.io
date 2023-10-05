@@ -1,0 +1,225 @@
+@import "mixins";
+@import "variables";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+html {
+    font-size: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+
+    @media screen and (max-width: 280px) {
+        font-size: 13px;
+    }
+
+    @media screen and (min-width: 390px) {
+        font-size: 18px;
+    }
+    @media screen and (min-width: 2560px) {
+        font-size: 23px;
+    }
+}
+
+body {
+    width: 100vw;
+    height: max-content;
+    overscroll-behavior: none;
+
+    @media screen and (min-width: 1024px) {
+        height: 90vh;
+        @include verticallyCenter;
+    }
+}
+
+.result {
+    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    @include verticallyCenter;
+    padding: 2rem 3rem;
+    border-radius: 0 0 2rem 2rem;
+    
+    .grey {
+        color: hsla(0, 0%, 100%, 0.7); 
+        &:last-of-type {
+            font-size: .8rem;
+            text-align: justify;
+            width: 73%;
+            line-height: 1.2rem;
+
+            @media screen and (max-width: 360px) {
+                font-size: .9rem;
+                width: 87%;
+            }
+
+            @media screen and (max-width: 280px) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: 390px) {
+                width: 85%;
+            }
+
+            @media screen and (min-width: 410px) {
+                font-size: .9rem;
+            }
+
+            @media screen and (min-width: 550px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: .9rem;
+                text-align: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    
+    .marks {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        @include verticallyCenter;
+        margin: 1rem 0;
+        .total-marks {
+            color: $white;
+            font-size: 3rem;
+        }
+        &:nth-child(2) {
+            font-size: .8rem;
+            color: hsla(0, 0%, 100%, 0.4);
+        }
+        @media screen and (min-width: 1024px) {
+            margin: 2rem 0;
+        }
+    }
+    
+    .big {
+        color: $white;
+        font-size: 1.3rem;
+        margin-bottom: .7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+}
+
+.summary {
+    padding: 1rem;
+    
+    .section-heading {
+        font-size: 1.1rem;
+        color:  $navy-blue;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .category {
+        height: 3rem;
+        border-radius: .7rem;
+        margin-top: 1rem;
+        background-color: pink;
+        display: flex;
+        justify-content: space-between;
+        padding: .8rem 1rem 1rem;
+        .score {
+            color: $gray;
+        }
+        span {
+            color: $navy-blue;
+            font-weight: 700;
+        }
+        &:first-of-type {
+            background-color: hsla(0, 100%, 67%, 0.1);
+            color: hsl(0, 100%, 67%);
+        }
+        &:nth-of-type(2) {
+            background-color: hsla(39, 100%, 56%, 0.1);
+            color: hsl(39, 100%, 56%);
+        }
+        &:nth-of-type(3) {
+            background-color: hsla(166, 100%, 37%, 0.1);
+            color: hsl(166, 100%, 37%);
+        }
+        &:last-of-type {
+            background-color: hsla(234, 85%, 45%, 0.1);
+            color: hsl(234, 85%, 45%);
+        }
+        i {
+            margin-right: 1rem;
+        }
+    }
+    
+    a {
+        width: 100%;
+        height: 3rem;
+        border-radius: 2rem;
+        display: inline-block;
+        background-color: $navy-blue;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+        line-height: 3rem;
+        margin-top: 2rem;
+        &:hover {
+            background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+        }
+    }
+
+    
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+        height: 100%;
+        padding: 2rem;
+    }
+}
+
+.attribution {
+    @include verticallyCenter;
+    width: 100%;
+    color: $gray;
+    font-size: .8rem;
+    margin: 2rem 0;
+    
+    a {
+        color: hsla(224, 30%, 27%, 0.8);
+        text-decoration: none;
+        
+    }
+
+    @media screen and (min-width: 1024px) {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.card {
+    @media screen and (min-width: 600px) {
+        width: 70%;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 65vw;
+        max-width: 50rem;
+        height: 27rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 30px hsl(221, 100%, 96%), 0 0 30px hsl(221, 100%, 96%);
+        border-radius: 2rem;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 52vw;
+    }
+}
