@@ -111,6 +111,7 @@ body {
 .result .marks .total-marks {
   color: hsl(0deg, 0%, 100%);
   font-size: 3rem;
+  font-weight: 700;
 }
 .result .marks:nth-child(2) {
   font-size: 0.8rem;
@@ -125,6 +126,7 @@ body {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.3rem;
   margin-bottom: 0.7rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 1024px) {
   .result {
