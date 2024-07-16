@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: local("Figtree ExtraBold"), url("/assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Figtree";
+  src: local("Figtree SemiBold"), url("/assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --black: hsl(0, 0%, 7%);
+}
+
+html {
+  font-family: "Figtree", sans-serif;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  row-gap: 1rem;
+}
+
+.blog-preview-card {
+  background-color: white;
+  max-width: 24rem;
+  max-height: 32.6rem;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 8px 8px 0 0 var(--black);
+}
+
+.blog-preview-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.tag {
+  background-color: var(--yellow);
+  font-weight: 800;
+  font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  line-height: normal;
+  border-radius: 4px;
+  padding: 7px 12px;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.date {
+  font-size: 0.85rem;
+  font-size: clamp(0.65rem, 1vw, 0.85rem);
+}
+
+h1 {
+  font-size: clamp(1.22rem, 2vw, 1.5rem);
+  margin-top: 5px;
+}
+h1:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.blog-preview-content {
+  display: grid;
+  justify-content: center;
+  row-gap: clamp(0.5rem, 1vw, 1rem);
+  margin: clamp(1rem, 2vw, 1.5rem) 0;
+}
+.blog-preview-content p {
+  color: #7f7f7f;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  line-height: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.author img {
+  width: 32px;
+  height: 32px;
+}
+.author span {
+  font-weight: 800;
+  font-size: clamp(0.65rem, 1vw, 0.85rem);
+}
+
+.attribution {
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1100px) {
+  .blog-preview-card {
+    width: 45vw;
+  }
+}
+@media screen and (max-height: 600px) {
+  body {
+    margin: 2rem 0rem 0.5rem;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+@media screen and (max-width: 600px) {
+  .blog-preview-card {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  .blog-preview-card {
+    width: 80vw;
+  }
+}/*# sourceMappingURL=styles.css.map */
