@@ -52,6 +52,7 @@ img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  margin: 10px 0;
 }
 
 .location {
@@ -63,7 +64,7 @@ img {
 p {
   font-size: 0.85rem;
   font-weight: 400;
-  margin-top: 20px;
+  margin: 25px 0 20px;
 }
 
 ul {
@@ -109,7 +110,7 @@ footer {
   color: hsl(0, 0%, 87%);
 }
 
-@media screen and (max-height: 660px) {
+@media screen and (max-height: 720px) {
   footer {
     position: static;
   }
