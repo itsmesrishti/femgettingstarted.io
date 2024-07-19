@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Fonts
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Variables
+$body-bg: hsl(0, 0%, 100%);
+$card-bg: hsl(0, 0%, 96%);
+$btn-bg: hsl(0, 0%, 87%);
+$font-color: hsl(0, 0%, 8%);
+$highlight: #FF5F1F;
+
+// body design
+body {
+  background-color: $body-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: $font-color;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+// card design
+main {
+  background-color: $card-bg;
+  width: 21rem;
+  height: 33rem;
+  text-align: center;
+  padding: 1.7rem;
+  border-radius: 6px;
+}
+
+img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.location {
+  color: $highlight;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background-color: $btn-bg;
+  padding: 12px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $highlight;
+    cursor: pointer;
+
+    a {
+      color: $body-bg;
+    }
+  }
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+
+//footer
+footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 0.65rem;
+  color: $btn-bg;
+}
+
+.attribution {
+  span {
+    line-height: 1.2rem;
+
+    a {
+      font-weight: 700;
+      color: $btn-bg;
+    }
+  }
+}
+
+// responsiveness
+@media screen and (max-height: 660px) {
+  footer {
+    position: static;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: max-content 50px;
+    row-gap: 1.5rem;
+    margin: 2rem 0;
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    width: 85vw;
+  }
+}
