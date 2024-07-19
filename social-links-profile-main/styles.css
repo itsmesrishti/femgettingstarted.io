@@ -45,7 +45,7 @@ main {
   width: 21rem;
   height: 33rem;
   text-align: center;
-  padding: 1.7rem;
+  padding: 2rem;
   border-radius: 6px;
 }
 
@@ -73,7 +73,7 @@ ul {
 
 li {
   background-color: hsl(0, 0%, 87%);
-  padding: 12px;
+  padding: 1rem;
   width: 100%;
   margin-top: 15px;
   border-radius: 6px;
