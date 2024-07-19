@@ -42,7 +42,7 @@ a {
 
 main {
   background-color: hsl(0, 0%, 96%);
-  width: 21rem;
+  width: 22rem;
   text-align: center;
   padding: 2rem;
   border-radius: 6px;
@@ -56,7 +56,7 @@ img {
 }
 
 .location {
-  color: #FF5F1F;
+  color: #00BA34;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -81,7 +81,7 @@ li {
   font-weight: 700;
 }
 li:hover {
-  background-color: #FF5F1F;
+  background-color: #00BA34;
   cursor: pointer;
 }
 li:hover a {
