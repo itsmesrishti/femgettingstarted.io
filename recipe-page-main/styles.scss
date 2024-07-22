@@ -1,0 +1,253 @@
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// FONTS
+@font-face {
+  font-family: "Young Serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Regular.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf") format(truetype);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Bold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+
+// VARIABLES
+$bg-color: hsl(30, 54%, 90%);
+$recipe-card-bg: hsl(0, 0%, 100%);
+$heading-font: "Young Serif";
+$content-font: "Outfit";
+$heading-color: hsl(24, 5%, 18%);
+$primary-color: hsl(30, 10%, 34%);
+$secondary-color: hsl(14, 45%, 36%);
+$tertiary-color: hsl(332, 51%, 32%);
+$tertiary-color-bg: hsl(330, 100%, 98%);
+$line-color: hsl(30, 18%, 87%);
+
+// GENERAL STYLES
+body {
+  background-color: $bg-color;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 6.5rem 1rem;
+  font-family: $content-font;
+  color: $primary-color;
+}
+
+main {
+  width: 51vw;
+  background-color: $recipe-card-bg;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+}
+
+// headings
+h1,
+h2 {
+  font-family: $heading-font;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.3rem;
+  color: $heading-color;
+  margin: 2rem 0 1rem;
+}
+
+h2 {
+  color: $secondary-color;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+p,
+li,
+td {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+}
+
+// lists
+ul,
+ol {
+  padding-left: 1.3rem;
+  li {
+    padding-left: 1rem;
+    &::marker {
+      color: $secondary-color;
+    }
+  }
+}
+
+ul li {
+  line-height: 1.7rem;
+
+  &::marker {
+    font-size: .8rem;
+  }
+}
+
+ol li::marker {
+  font-variant-numeric: normal;
+  font-weight: 700;
+}
+
+.prep-time ul li::marker {
+  color: $tertiary-color;
+}
+
+.ingredients ul li {
+  list-style-type: square;
+}
+
+// instruction sec
+.instructions {
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+  margin: 2rem 0 .5rem;
+  padding: .5rem 0 1.5rem;
+
+  li {
+    margin-bottom: .5rem;
+  }
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.prep-time {
+  order: -1;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.prep-time {
+  background-color: $tertiary-color-bg;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0 .5rem;
+
+  h3 {
+    font-size: 1.1rem;
+    color: $tertiary-color;
+    margin-bottom: .5rem;
+  }
+}
+
+// nutrition
+table {
+  width: 100%;
+  margin-top: .5rem;
+
+  td {
+    padding: .5rem 1.7rem;
+    font-size: .9rem;
+
+    &:last-of-type {
+      color: $secondary-color;
+      font-weight: 600;
+    }
+  }
+
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $line-color;
+  }
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: -2rem;
+  
+  span {
+    font-size: .8rem;
+    line-height: 1.2rem;
+    color: $primary-color;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  main {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 38em) {
+  body {
+    padding: 0 0 1rem;
+  }
+  main {
+    width: 100vw;
+    border-radius: 0;
+    padding-top: 43vw;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0;
+    }
+  }
+  footer {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 23em) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 20px;
+  }
+  main {
+    width: 40vw;
+  }
+}
