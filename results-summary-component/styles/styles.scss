@@ -204,6 +204,10 @@ body {
         position: absolute;
         bottom: 0;
     }
+
+    @media screen and (max-height: 600px) {
+        position: static;
+    }
 }
 
 .card {
